@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+	<header>
+		<meta charset="utf-8" />
+		<meta HTTP-EQUIV="Content-Style-Type" CONTENT="text/css" />
+		<link rel="stylesheet" type="text/css" href="data/style.css" />
+		<title>Interpol - MIF31 - projet</title>
+	</header>
+
+	<body>
+		<h1>Interpol</h1>
+		<div class="carre">
+			<h2>Introduction</h2>
+			<p>
+				Voici notre projet de programmation générique MIF31. <br />
+				Le document suivant va énoncer assez rapidement tout ce qu'il faut savoir.
+			</p>
+		</div>
+		<div class="carre">
+			<h2>Conditions d'utilisations</h2>
+			Il est nécessaire de respecter les conditions suivantes pour essayer notre projet :
+			<ul>
+				<li>Avoir <a href="http://liris.cnrs.fr/alexandre.meyer/grapic/html/index#linux">GraPic</a></li>
+				<li>Avoir SDL2, SDL2_image, SDL2_ttf</li>
+			</ul>
+		</div>
+		<div class="carre">
+			<h2>Lancement</h2>
+			Pour essayer notre projet, il faut savoir qu'il existe une partie graphique.<br />
+			C'est la partie par defaut, et qui se contente d'un espace en <strong>2 dimensions</strong>.<br />
+			<span id="u">Il suffit juste de :</span> <br />
+			<div class="code">make exec</div>
+			Ou bien
+			<div class="code">./exec/myprog</div>
+			<br />
+			Il est également possible de générer des points aléatoirements via le script <a href="generate.py">generate.py</a>
+			présent dans ce répertoire, de la façon suivante :
+			<div class="code">./generate.py Dimension_des_points nombre_de_points_voulu</div>
+			<br />
+			<h2>Interactions</h2>
+			<p>
+				Une fois l'interface graphique chargée, en plaçant votre souris dans un simplex, vous aurez une prévisualisation
+				du point d'interpolation qu'elle représente.
+			</p>
+			<img src="data/exemple1.png" alt="démonstration avec la souris" />
+			<p>
+				Puis, un clic gauche permet de fixer ce point, avec la valeur d'interpolation calculée.<br />
+				Et ainsi de suite...
+			</p>
+		</div>
+		<div class="carre">
+			<h2>Informations complémentaires</h2>
+			<ul>
+				<li>
+					Il est possible de lancer des tests unitaires comme ceci :
+					<div class="code">make test</div>
+					Cependant, une version de perl doit etre installée.
+				</li>
+				<li>
+					le fichier <a href="valgrind.txt">valgrind.txt</a> est un fichier de suppression pour l'application, 
+					ignorant tous les problèmes liés à GraPic (donc à SDL2) lors de l'execution de valgrind.
+					Pour l'utiliser, il faut faire :
+					<div class="code">valgrind --leak-check=full --num-callers=50 --show-reachable=yes --suppressions=valgrind.txt ./exec/myprog</div>
+				</li>
+				<li>
+					Il est possible de compiler la documentation en faisant :
+					<div class="code">doxygen doc/doxyfile</div>
+				</li>
+				<li>Le répertoire <strong>bin/</strong> contient les DLLs requises pour Grapic</li>
+			</ul>
+		</div>
+		<div class="carre">
+			<h2>Auteurs</h2>
+			<ul>
+				<li>BARDOUX Laurent p1108365</li>
+				<li>Liu Zhuying p1306849</li>
+				<li>Dusseaux Tom p1511150</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,137 @@
+{
+   SUPP1
+   Memcheck:Cond
+   obj:/usr/lib/nvidia-340/libnvidia-glcore.so.340.96
+   ...
+   obj:/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.0
+}
+
+{
+   SUPP2
+   Memcheck:Cond
+   obj:/usr/lib/nvidia-340/libnvidia-glcore.so.340.96
+   ...
+   fun:init
+   fun:_ZN6grapic7winInitEPKcii
+   fun:main
+}
+
+{
+   lol
+   Memcheck:Cond
+   obj:/usr/lib/nvidia-340/libnvidia-glcore.so.340.96
+   ...
+   fun:main
+}
+
+
+{
+   SUPP3
+   Memcheck:Cond
+   obj:/usr/lib/nvidia-340/libnvidia-glcore.so.340.96
+   ...
+   fun:init
+   fun:_ZN6grapic7winInitEPKcii
+   fun:main
+}
+
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Cond
+   obj:/usr/lib/nvidia-340/libnvidia-glcore.so.340.96
+   ...
+   fun:init
+   fun:_ZN6grapic7winInitEPKcii
+   fun:main
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   ...
+   fun:init
+   fun:_ZN6grapic7winInitEPKcii
+   fun:main
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   ...
+   fun:init
+   fun:_ZN6grapic7winInitEPKcii
+   fun:main
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   ...
+   fun:init
+   fun:_ZN6grapic7winInitEPKcii
+   fun:main
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: definite
+   fun:malloc
+   ...
+   fun:init
+   fun:_ZN6grapic7winInitEPKcii
+   fun:main
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: definite
+   fun:malloc
+   ...
+   fun:manageEvent
+   fun:_ZN6grapic14winManageEventEv
+   fun:main
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   ...
+   fun:dbus_message_new_method_call
+   ...
+   fun:main
+}
+
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Cond
+   ...
+   fun:_ZN6grapic5printEiiPKc
+   ...
+   fun:main
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Value8
+   ...
+   fun:_ZN6grapic5printEiiPKc
+   ...
+   fun:main
+}
+
+
+
+
+
